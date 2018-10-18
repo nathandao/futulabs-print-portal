@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+  background: #000;
+  color: #999;
+  font-family: "Source Code Pro";
+  font-size: 18px;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-weight: normal;
+  text-align: left;
+}
+
+b {
+  color: #fff;
+}
+
+a {
+  color: #bada55;
+}
+
+p {
+  font-weight: normal;
+  max-width: 800px;
+  text-align: left;
+}
+
 .App {
   text-align: center;
   width: 100%;
@@ -10,7 +39,6 @@
 
 .App-header {
   animation: blink infinite 0.2s linear;
-  padding: 0.5em 0;
   color: #bada55;
 }
 
@@ -25,33 +53,33 @@
 }
 
 .camera-container {
-  width: 100%;
   display: flex;
+  width: 100%;
 }
 
 .camera-feed {
-  position: relative;
-  display: flex;
-  flex: 1;
-  height: 800px;
+  align-items: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: center;
-  justify-content: center;
-  font-size: 5em;
   color: #fff;
+  display: flex;
+  flex: 1;
+  font-size: 5em;
+  height: 50vh;
+  justify-content: center;
+  position: relative;
 }
 
 .camera-feed:before{
-  display: block;
+  background: rgba(255, 0, 129, 0.3);
   content: "";
+  display: block;
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(255, 0, 129, 0.3);
 }
 
 .camera-feed.camera-feed-trevor:before {
@@ -64,4 +92,16 @@
 
 .camera-feed-trevor{
   background-image: url("http://hki-octoprint.futurice.com/webcam/trevor/?action=stream")
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+  .camera-container{
+    height: 100vh;
+  }
+  .camera-feed {
+    font-size: 2em;
+  }
 }
